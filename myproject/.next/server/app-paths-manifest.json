@@ -1,0 +1,5 @@
+{
+  "/not-found": "app/not-found.js",
+  "/page": "app/page.js",
+  "/Planner/Daily/page": "app/Planner/Daily/page.js"
+}
