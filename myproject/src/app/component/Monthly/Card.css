@@ -1,0 +1,108 @@
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card_month {
+  position: relative;
+  padding: 20px;
+  width: 100%; /* Full width inside the column */
+  background: linear-gradient(145deg, #74ee88, #5560ea); /* Gradient background */
+  border-radius: 15px;
+  box-shadow: 2px 4px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: scale(1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+  color: white;
+  cursor: pointer;
+}
+
+.card_month:hover {
+  transform: scale(1.05); /* Slight zoom on hover */
+  box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2); /* Darker shadow for hover */
+  background: linear-gradient(145deg, #3de559, #6e7dff); /* Inverse gradient on hover */
+}
+
+.card_month h3 {
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  color: #f1f1f1; /* Lighter text color */
+}
+
+.card_month p {
+  margin: 5px 0;
+  font-size: 1rem;
+  text-align: center;
+  color: #e0e0e0; /* Lighter text for description */
+}
+
+.card_month .delete-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.card_month .delete-icon:hover {
+  transform: scale(1.2); /* Slight zoom on hover */
+  color: red;
+}
+
+.card_month .delete-icon svg {
+  fill: white;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card_month {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loader {
+  border: 8px solid #f3f3f3;
+  border-top: 8px solid #6e7dff;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 992px) {
+  .card_month {
+    width: 100%; /* Cards take full width on medium screens */
+  }
+}
